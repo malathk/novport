@@ -1,19 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,200&display=swap');
-
+@import "animations.css";
 /* head{
 
 } */
 
 
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y:hidden;
+}
+
 body{
    
     font-family: 'Spectral', serif;
-    line-height: 1.4;
+    /* line-height: 1.8; */
+    /* background-color:rgba(66, 46, 20, 0.226); */
+background-image:#eabdff;background-image:  
+   radial-gradient(at 53% 50%, hsla(0,0%,100%,1) 0, transparent 50%),  
+   radial-gradient(at 22% 78%, hsla(239,100%,89%,1) 0, transparent 50%),  
+   radial-gradient(at 0% 50%, hsla(355,85%,93%,1) 0, transparent 50%),  
+   radial-gradient(at 56% 84%, hsla(340,69%,80%,1) 0, transparent 50%),  
+   radial-gradient(at 0% 100%, hsla(243,100%,95%,1) 0, transparent 50%),  
+   radial-gradient(at 89% 13%, hsla(209,56%,85%,1) 0, transparent 50%),  
+   radial-gradient(at 30% 37%, hsla(343,100%,81%,1) 0, transparent 50%);
 
-    animation: fadeInAnimation ease 3s;
+    /* animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+    /* animation: enteranceAnimation ease out 2.5s; */
+    -webkit-animation: fade-in-bottom 2.6s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+	        animation: fade-in-bottom 2.6s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
+
 
 @keyframes fadeInAnimation {
     0% {
@@ -24,15 +47,115 @@ body{
      }
 }
 
-li{
-    list-style-type:none;
+@keyframes enteranceAnimation{
+    0% {
+        filter: blur(90px); 
+
+    }
+    100% {
+       
+       
+     }
+}
+ul.type-of-work.a{
+    padding:0%;
+    margin:0%;
+    
+    
+
+
+}
+.type-of-work {
+  font-weight: 200;  
+}
+
+ol,
+ul {
+  display: grid;
+  list-style: none;
+ 
+  /* adjust the `min` value to your context */
+  /* grid-template-rows: repeat(auto-fill, minmax(1ch, 1fr)); */
+  grid-gap: 0rem;
+
+}
+h2{
+    margin:0%;
+    font-weight: 400;
+}
+.type-of-work h2{
+   
+padding-top:2%;
+color:rgb(34, 34, 34);
+/* padding-bottom:5%; */
+}
+
+li a {
+    font-size:medium;
+    color:rgb(56, 97, 60);
+    
+}
+li a:hover{
+    color:rgb(188, 146, 255);
+    font-weight:200;
+font-style: italic;
+  
+}
+
+
+li a:active{
+    color:rgb(255, 255, 255);
+    font-weight: 100;
+
+}
+.company{
+    padding-top:2%;
+    padding-bottom: 1%;
+   
+    font-weight: 500;
+
     
 }
 
 
+.tasks{
+    color:rgba(15, 15, 17, 0.788);
+    text-shadow: 2px 2px 2px rgba(0, 255, 0, 0.185);
+    backdrop-filter:blur(5px);
+   
+    /* backdrop-filter:drop-shadow(16px 16px 10px black); */
+    font-weight: lighter;
+    font-size: medium;
+    
+    padding-top:5%;
+    padding-bottom:5%;
+    margin-right:5%;
+ border-radius: 5mm;
+ 
+  
+}
+
+.tasks:hover{
+   
+    color:rgb(41, 39, 39);
+    border-radius:5%;
+}
+
+a{
+text-decoration: none;
+/* padding-top:2%; */
+margin:0%;
+padding:0%;
+
+/* line-height: 5%; */
+/* list-style-image: url('blob.png'); */
+
+}
+
 .iframe-container{
-    /* position:absolute; */
+    position:absolute;
     z-index:-20;
+  
     /* margin-left:-2%; */
     /* margin-top:-50%; */
     /* margin-bottom:0%; */
@@ -40,31 +163,157 @@ li{
     border:0%;
     width:100vw; 
     height:100vh;
+    border:hidden;
+
+
 
    
 }
 iframe{
-    /* position: absolute; */
+   z-index: -20;
+     
+    position: absolute;
     border: hidden;
     overflow:hidden;
-    min-width: 100%;
-     min-height: 100%;
+    min-width: 100vw;
+     min-height: 100vh;
+     
+     -webkit-animation: fade-in-bottom 2.6s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+	        animation: fade-in-bottom 2.6s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+   animation-delay: 0.6s;
    
 }
 .container{
+    /* backdrop-filter: blur(2px); */
     /* position: absolute; */
     display:flex;
+   
     margin: 2%;
-    padding:5%;
-    backdrop-filter: blur(2px);
+    /* padding:5%; */
+    
+    height:100%;
+   
+}
+.main-sidebar{
+    flex-basis:60%;
+  padding-top:10%;
+  padding-left:2%;
+  padding-right:2%;
+  /* padding-bottom: 12%; */
+  margin-top:5%;
+  margin-bottom:10%;
+ color:rgba(49, 45, 45, 0.884);
+ line-height: 2;
+backdrop-filter: blur(5px);
+border-radius: 5mm;
+    text-overflow: ellipsis;
+    font-size: 2vh;
+    overflow-wrap: normal;
+    text-shadow: 2px 2px 2px rgb(255, 252, 210);
+box-shadow: 0.03px 0.03px 1px 0.04px;
+align-self: stretch;
+/* overflow:hidden; */
+
 }
 
-.main-container{
-display: inline;
+.skills{
+    display:flex;
+    flex-direction: row;
+    padding:0%;
+margin:0%;
+   
+}
+.skillbox{
+   /* margin-right:5%; */
+   padding:0%;
+margin:2%;
+   
+}
+.skill{ 
+  margin-top:0%;
+  font-size:1rem;
+ align-self:center;
+}
+.circles{
+    display:flex;
+    flex-direction: row;
+    align-content: flex-start;
+   padding:0%;
+    margin-left:px;
+}
+.fcircle{
+height: 10px;
+width: 10px;
+background-color:rgb(75, 67, 67);
+border-radius: 50%;   
+display: inline-block;
+padding:0%;
+margin:0%;
+}
 
+.ecircle{
+    
+     height: 10px;
+     width: 10px;
+     background-color:rgba(75, 67, 67, 0.315);
+     border-radius: 50%;   
+     display: inline-block;
+     padding:0%;
+margin:0%;
+    
+}
+.main-container{
+  
+flex-basis: 100%;
+    margin:5%;
+   margin-right:2%;
+   margin-bottom:10%;
+flex-direction: column;
+flex-grow: 1;
+overflow-x:hidden;
+overflow-y:auto;
+box-shadow: 0.03px 0.03px 1px 0.04px;
+/* background-color: rgba(255, 255, 255, 0.267); */
+
+ border-radius: 5mm;
+
+-webkit-box-shadow:0.03px 0.03px 1px 0.04px;;
+-moz-box-shadow:   0.03px 0.03px 1px 0.04px;;
+box-shadow:        0.03px 0.03px 1px 0.04px;;
+backdrop-filter: blur(5px);
+backdrop-filter: brightness(2); 
 
 
   
+}
+
+/* .main-container::-webkit-scrollbar{
+   scrollbar-width: none;
+    background-image: linear-gradient(180deg, rgba(255, 202, 231, 0.322) 0%, rgba(217, 255, 210, 0.651) 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 0px; 
+} */
+.main-container::-webkit-scrollbar {
+    width: 5px;
+    height:50px;
+}
+
+.main-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgb(209, 255, 179);
+    border-radius: 100px;
+    height:10px;
+
+}
+
+.main-container::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 7px rgba(17, 0, 255, 0.5);
+   /* height:5px; */
+    border-radius: 100px;
+}
+.main-container::-webkit-scrollbar-button {
+    box-shadow: inset 0 0 7px rgba(17, 0, 255, 0.5);
+   height:5px;
+    border-radius: 100px;
 }
 .hidden{
     display:none !important;
@@ -75,18 +324,8 @@ display: inline;
     
 /* } */
 
-.projDisplay .proj-list.active{
-    background:red;
-}
-.main-sidebar{
-    position: -webkit-sticky;
-    position: sticky;
-   top:0%;
-    
-    
-    
-    width:30%;
-}
+
+
 
 /* .main-content{
     margin: 2%;
@@ -94,45 +333,66 @@ display: inline;
    
 } */
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
  
     body{
-      font-size: larger;
+      /* font-size: larger; */
     }
    .container{
-      
+        /* backdrop-filter: blur(2px); */
        display:flexbox;
        flex-direction: column;
        flex-wrap: nowrap;
-       backdrop-filter: blur(2px);
+     
      border-radius: 20%;
 
-       padding:2%
+       /* padding:5% */
 
    }
    .main-sidebar{
-       background-color:white;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-bottom:0%; 
+    font-size: normal;
        /* display: inline-block; */
-    width:99%;
+    /* width:99%; */
     flex-wrap: nowrap;
     padding-left: 0%;
 /* padding-right: 90%; */
-    padding-top: 15%;
-    padding-bottom: 5%;
-    
-   
-    
+    /* padding-top: 15%; */
+  
     
 }
+
     .main-container{
-     
-        width:100%;
-        padding-left: 0%;
+     background-color: rgba(255, 255, 255, 0.322);
+     margin-top: 0%;
+     margin-left:0%;
+     margin-right:0%;
+     margin-bottom:20%;
+     box-shadow: none;
+        /* width:100%; */
+        padding-top:5%;
+        padding-left:5%;
+        padding-right:5%;
+        padding-bottom:5%;
        
-         
         
-     
-        font-size: large;
+   
+        font-size: medium;
+    }
+    .type-of-work{
+        margin:0%;
+        padding:0%;
+        margin-bottom:5%;
+        padding-bottom:5%
+    }
+   
+   
+    h2{
+        padding:0%;
+        margin:0;
     }
 
 .iframe-container{
@@ -141,56 +401,40 @@ display: inline;
     opacity: 0.6;
     position:absolute;
     z-index: -30;
+    
  
 
 }
 iframe{
     overflow: hidden;
     position:absolute;
+   
 
 }
 
   }
 
-@media (min-width: 481px) and (max-width: 1000px) {
-    body{
-        overflow-x: hidden;
+  @media (min-width:705) and (max-width :1000px)  {
+    .main-sidebar{
+
+       
+       
     }
-  
-.container{
-    overflow-y: hidden;
-    display:flex;
-    /* justify-content: space-between; */
-    margin: 2%;
-    backdrop-filter: blur(2px);
-}
-
-.main-container{
-
-
-
-
-  
-}
-
-
-.main-sidebar{
-  
-    position: sticky;
-    top: 0;
+    .main-container{
+     
+        
+        padding-left: 0%;
+       
     
+     
+        font-size: large;
+    }
 
-   
-}
-
-
-
-    
-}
+  }
 
 @media (min-width:1001) and (max-width :2000px)  {
     body{
-        font-size: 2rem;
+        /* font-size: 5rem; */
     }
    
     .main-container{
@@ -201,18 +445,18 @@ iframe{
          
        }
 .main-sidebar{
-    width:50%;
+    
     padding-right: 0%;
     position:sticky;
     top:0;
     margin-top:20%;
-    overflow-y:hidden;
+    /* overflow-y:hidden; */
 }
 }
 
 @media (min-width :2000px)  {
     body{
-        font-size: 3rem;
+        font-size: 2rem;
     }
    
     .main-container{
@@ -220,26 +464,29 @@ iframe{
        padding-top: 5%;
 
        padding-left:5%;
+       padding-bottom: 5%;;
        
          
        }
 .main-sidebar{
-    width:50%;
-
+    /* width:90%; */
+min-width:30%;
+font-size:3rem;
     padding-right: 0%;
     position:sticky;
+
     top:0;
     margin-left:5%;
-    margin-top:20%;
+    /* margin-top:10%;  */
     overflow-y:hidden;
 }
 .iframe-container{
-margin-top:-30%;
+/* margin-top:-30%; */
 
 }
 .iframe{
-    width:230%;
-    height: 300%;
+    /* width:230%; */
+    /* height: 300%; */
 }
 
 }
