@@ -18,9 +18,14 @@ background-image:
    radial-gradient(at 0% 100%, hsla(243,100%,95%,1) 0, transparent 50%),  
    radial-gradient(at 89% 13%, hsla(209,56%,85%,1) 0, transparent 50%),  
    radial-gradient(at 30% 37%, hsla(343,100%,81%,1) 0, transparent 50%);
-
+   -webkit-animation: fade-in-bottom 2.6s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+   animation: fade-in-bottom 2.6s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 
 }
+
+
+
+
 .type-body-1{
     /* margin-right: 0%; */
     margin-left:2%;
@@ -175,7 +180,7 @@ a:active{
     font-weight: 100;
 
 }
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     
 .row{
    
@@ -202,9 +207,9 @@ a:active{
 
 img{
     border-width:1vh 1vh 1vh 1vh;
-    border-image-slice:20% 3.5% 6.5% 3.5%;
+    border-image-slice:2% 3.5% 6.5% 3.5%;
     padding:2%;
-   width:40%; 
+   width:20%; 
    height:auto;
   min-width: 30%;
   object-fit: cover;
@@ -212,11 +217,14 @@ img{
 
 }
 
+.type-body-1{
+  color:pink;
+}
 
       
 }
 
-@media only screen and (min-width: 100px) {
+@media only screen and (min-width: 1000px) {
 .projects{
     padding-right:50px;
     padding-left:30px;
