@@ -111,7 +111,7 @@ img{
     border-width:8vh 0vh 0vh 0vh;
 border-color: white;;
     border-style:solid;
-    border-image-source:url('/novport/css/imgb.png'); 
+    border-image-source:url('/css/imgb.png'); 
     border-image-slice:20% 3.5% 6.5% 3.5%;
     
     box-shadow: 0 1px 3px rgba(155, 55, 55, 0.12), 0 1px 2px rgba(0,0,0,0.24);

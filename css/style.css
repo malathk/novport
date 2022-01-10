@@ -443,11 +443,7 @@ iframe{
   }
 
   @media (min-width:705) and (max-width :1000px)  {
-    .main-sidebar{
-
-       
-       
-    }
+   
     .main-container{
      
         
@@ -461,9 +457,7 @@ iframe{
   }
 
 @media (min-width:1001) and (max-width :2000px)  {
-    body{
-        /* font-size: 5rem; */
-    }
+   
    
     .main-container{
 
@@ -508,14 +502,6 @@ font-size:3rem;
     margin-left:5%;
     /* margin-top:10%;  */
     overflow-y:hidden;
-}
-.iframe-container{
-/* margin-top:-30%; */
-
-}
-.iframe{
-    /* width:230%; */
-    /* height: 300%; */
 }
 
 }
